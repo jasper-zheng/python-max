@@ -1,4 +1,4 @@
-# python-to-max
+# python-max
 
 A request/response protocol between a Python script and a Max/MSP patch, via
 [Socket.IO](https://socket.io/). In Python you call `request(route, type, data)` and get back whatever the Max patch returns.
@@ -9,8 +9,13 @@ A request/response protocol between a Python script and a Max/MSP patch, via
 ### Setup
 
 ```bash
-python3 -m venv .venv
-.venv/bin/pip install -r python/requirements.txt
+pip install python-max
+```
+
+The audio example additionally needs [`soundfile`](https://pypi.org/project/soundfile/):
+
+```bash
+pip install "python-max[audio]"
 ```
 
 ### Use
@@ -18,7 +23,7 @@ python3 -m venv .venv
 Below is an example of sending a typed value to Max without awaiting a reply.
 
 ```python
-from max_client import MaxClient
+from python_max import MaxClient
 
 client = MaxClient(url="http://127.0.0.1", port=5002)
 client.connect()
@@ -36,7 +41,7 @@ client.disconnect()
 Below is an example of sending a typed request to Max and awaiting a reply.
 
 ```python
-from max_client import MaxClient
+from python_max import MaxClient
 
 client = MaxClient(url="http://127.0.0.1", port=5002)
 client.connect()
@@ -85,8 +90,8 @@ emit("test", "dict", {"freq": [440, 880, 1760], "gain": 0.5})
 
 ### Run it
 
-See `python2max.maxpat`.
+See [python2max.maxpat](python2max.maxpat).
 
 ## How to send audio data
 
-Node for Max does not have access to Max's `buffer~` objects (it's a diferent JS runtime than v8). So to send audio data from Python to Max, you need to send it as an Array via a dictionary, and then use `array.tobuffer` to copy it into a `buffer~` object. See [example_audio.py](python/example_audio.py) and [example_audio.maxpat](max/example_audio.maxpat) for a working example.
+Node for Max does not have access to Max's `buffer~` objects (it's a diferent JS runtime than v8). So to send audio data from Python to Max, you need to send it as an Array via a dictionary, and then use `array.tobuffer` to copy it into a `buffer~` object. See [example_audio.py](python/example_audio.py) and [python2max-audio.maxpat](python2max-audio.maxpat) for a working example.

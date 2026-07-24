@@ -6,7 +6,7 @@ from pathlib import Path
 
 import soundfile as sf
 
-from max_client import emit, disconnect
+from python_max import emit, disconnect
 
 WAV = Path(__file__).resolve().parent.parent / "test" / "Automatic_90_Am_GuitarRiff02.wav"
 SNIPPET_FRAMES = 44100*10

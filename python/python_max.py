@@ -18,7 +18,7 @@ Supported types (Max's way of naming data):
 
 Basic usage:
 
-    from max_client import request
+    from python_max import request
 
     # send to the "test" selector (matches `route test` in the patch)
     results = request("test", "symbol", "hello max")

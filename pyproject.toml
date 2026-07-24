@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python-max"
+version = "0.1.0"
+description = "Send typed values from Python to a Max/MSP patch over Socket.IO."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Jasper Zheng", email = "jasper.zheng.u@gmail.com" }]
+keywords = ["max", "maxmsp", "socketio", "audio", "creative-coding", "music"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = ["python-socketio[client]>=5.13,<6"]
+
+[project.optional-dependencies]
+audio = ["soundfile"]
+
+[project.urls]
+Homepage = "https://github.com/jasper-zheng/python-max-python"
+Repository = "https://github.com/jasper-zheng/python-max-python"
+Issues = "https://github.com/jasper-zheng/python-max-python/issues"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["python/python_max.py"]
+sources = ["python"]
+
+[tool.hatch.build.targets.sdist]
+include = ["python/python_max.py", "README.md", "LICENSE", "pyproject.toml"]

@@ -11,7 +11,7 @@ stray `response` paired with an in-flight `request`, resolving the wrong call.
 
 import time
 
-from max_client import emit, disconnect
+from python_max import emit, disconnect
 
 
 def main() -> None:
@@ -22,7 +22,7 @@ def main() -> None:
     emit("emit", "float", 3.14)
     emit("emit", "symbol", "hello max")
     emit("emit", "list", [1, 2.0, "three"])
-    emit("emit_dict", "dict", {"freq": [440, 442, 441], "gain": 0.5})
+    emit("emit", "dict", {"freq": [440, 442, 441], "gain": 0.5})
 
     # disconnect() closes the socket without draining
     # the write queue, so give the last messages a moment to flush before closing.

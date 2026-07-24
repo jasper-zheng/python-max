@@ -10,9 +10,79 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 75.0, 150.0, 1040.0, 814.0 ],
+		"rect" : [ 504.0, 157.0, 697.0, 814.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 258.0, 399.0, 165.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"text" : "An emit does not need a response"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 89.0, 466.0, 165.0, 20.0 ],
+					"text" : "A request needs a response"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 258.0, 363.0, 134.0, 22.0 ],
+					"text" : "print request @popup 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 89.0, 363.0, 134.0, 22.0 ],
+					"text" : "print request @popup 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 258.0, 318.0, 62.0, 22.0 ],
+					"text" : "route emit"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 301.0, 149.0, 63.0, 22.0 ],
+					"text" : "script stop"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Lato",
 					"fontsize" : 24.0,
@@ -27,47 +97,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-35",
-					"maxclass" : "dict.view",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 338.0, 482.0, 100.0, 100.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-33",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 246.819999999999993, 433.79000000000002, 59.0, 22.0 ],
-					"text" : "route test"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-32",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.5, 433.0, 86.0, 35.0 ],
-					"text" : "test dictionary u164008046"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 189.0, 358.0, 105.0, 22.0 ],
+					"patching_rect" : [ 68.0, 437.0, 105.0, 22.0 ],
 					"text" : "prepend response"
 				}
 
@@ -76,11 +111,11 @@
 				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 189.0, 296.0, 139.0, 22.0 ],
-					"text" : "route test test_dict audio"
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 68.0, 318.0, 79.0, 22.0 ],
+					"text" : "route request"
 				}
 
 			}
@@ -91,7 +126,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 127.0, 101.0, 64.0, 22.0 ],
+					"patching_rect" : [ 228.0, 149.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -103,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 31.0, 101.0, 58.0, 22.0 ],
+					"patching_rect" : [ 68.0, 106.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -115,7 +150,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.0, 144.0, 149.0, 22.0 ],
+					"patching_rect" : [ 68.0, 149.0, 149.0, 22.0 ],
 					"text" : "script npm install socket.io"
 				}
 
@@ -127,7 +162,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 229.0, 228.0, 79.0, 22.0 ],
+					"patching_rect" : [ 266.0, 233.0, 79.0, 22.0 ],
 					"text" : "route running"
 				}
 
@@ -148,7 +183,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 549.0, 105.0, 400.0, 220.0 ],
+					"patching_rect" : [ 451.0, 110.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -161,7 +196,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 31.0, 189.0, 217.0, 22.0 ],
+					"patching_rect" : [ 68.0, 194.0, 217.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"color" : 						{
 							"expression" : "themecolor.live_lcd_control_fg"
@@ -179,6 +214,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -197,7 +234,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
-					"midpoints" : [ 298.5, 266.0, 367.01953125, 266.0, 367.01953125, 97.65234375, 558.5, 97.65234375 ],
+					"midpoints" : [ 335.5, 271.0, 404.01953125, 271.0, 404.01953125, 99.71875, 460.5, 99.71875 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -212,6 +249,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
+					"midpoints" : [ 77.5, 479.79296875, 41.3046875, 479.79296875, 41.3046875, 178.6328125, 77.5, 178.6328125 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -225,29 +263,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-28", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-28", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-11", 0 ],
+					"order" : 0,
 					"source" : [ "obj-28", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-35", 0 ],
-					"source" : [ "obj-33", 0 ]
+					"destination" : [ "obj-2", 0 ],
+					"order" : 1,
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -261,14 +294,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
-					"order" : 2,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 1 ],
 					"order" : 1,
 					"source" : [ "obj-5", 0 ]
 				}
@@ -276,9 +301,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"order" : 0,
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
@@ -298,7 +330,7 @@
 			}
 , 			{
 				"name" : "max_server.js",
-				"bootpath" : "~/PhD/26-07-FM-Residency/python-max-python",
+				"bootpath" : "~/PhD/26-07-FM-Residency/python-max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1

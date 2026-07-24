@@ -2,7 +2,7 @@
 
 """
 
-from max_client import request, disconnect
+from python_max import request, disconnect
 
 
 def main() -> None:
