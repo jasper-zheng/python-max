@@ -1,7 +1,9 @@
 # python-max
 
 A request/response protocol between a Python script and a Max/MSP patch, via
-[Socket.IO](https://socket.io/). In Python you call `request(route, type, data)` and get back whatever the Max patch returns.
+[Socket.IO](https://socket.io/). In Python you call `request(route, type, data)` and get back whatever the Max patch returns. 
+
+Allows for sending/receiving typed values (int, float, symbol, list, dict) and audio buffers (as a dict of arrays) up to 32 MB in size.
 
 
 ## Python side (client)
