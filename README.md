@@ -92,6 +92,6 @@ emit("test", "dict", {"freq": [440, 880, 1760], "gain": 0.5})
 
 See [python-max.maxpat](python-max.maxpat).
 
-## How to send audio data
+## How to send/receive audio data
 
-Node for Max does not have access to Max's `buffer~` objects (it's a diferent JS runtime than v8). So to send audio data from Python to Max, you need to send it as an Array via a dictionary, and then use `array.tobuffer` to copy it into a `buffer~` object. See [example_audio.py](python/example_audio.py) and [python-max-audio.maxpat](python-max-audio.maxpat) for a working example.
+Node for Max does not have access to Max's `buffer~` objects (it's a diferent JS runtime than v8). So to send audio data between Python and Max, you need to send it as an Array via a dictionary. In practice, use `array.tobuffer` to copy it into a `buffer~` object, or use `array.frombuffer` to copy it from a `buffer~` object. See [example_audio.py](python/example_audio.py) and [python-max-audio.maxpat](python-max-audio.maxpat) for a working example.

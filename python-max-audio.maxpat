@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 900.0, 186.0, 1000.0, 780.0 ],
+		"rect" : [ 694.0, 186.0, 1000.0, 780.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -52,7 +52,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 228.0, 375.0, 104.0, 22.0 ],
+					"patching_rect" : [ 229.0, 375.0, 104.0, 22.0 ],
 					"text" : "print sr @popup 1"
 				}
 
